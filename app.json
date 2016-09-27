@@ -1,0 +1,12 @@
+{
+  "name": "Smooth Operator demo by Maankoodauskurssi 2016",
+  "description": "",
+  "repository": "",
+  "logo": "",
+  "env": {
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "Install `webpack` and other development modules when deploying to allow full builds.",
+      "value": "false"
+    }
+  }
+}
