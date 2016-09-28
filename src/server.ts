@@ -53,8 +53,8 @@ function ngApp(req, res) {
 app.get('/', ngApp);
 app.get('/about', ngApp);
 app.get('/about/*', ngApp);
-app.get('/home', ngApp);
-app.get('/home/*', ngApp);
+app.get('/developer', ngApp);
+app.get('/developer/*', ngApp);
 
 
 app.get('*', function (req, res) {
