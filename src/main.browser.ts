@@ -10,16 +10,24 @@ import { LandingPage } from './app/landingpage.component'
 import { DeveloperLandingPage } from './app/developer/devlandingpage.component'
 import { DevNavbarComponent } from './app/developer/devnavbar.component'
 import { DevloperAppsListComponent } from './app/developer/devapps.component'
+import { UserLandingPage } from './app/user/userlandingpage.component'
+import { UserNavbarComponent } from './app/user/usernavbar.component'
 
 @NgModule({
     bootstrap: [App],
-    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent],
+    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent, UserLandingPage, UserNavbarComponent],
     imports: [
         UniversalModule, // BrowserModule, HttpModule, and JsonpModule are included
         FormsModule,
         NgbModule,
         RouterModule.forRoot([
             { path: '', component: LandingPage, pathMatch: 'full' },
+            {
+                path: 'kuluttaja',
+                children: [
+                    { path: '', component: UserLandingPage, pathMatch: 'full' }
+                ]
+            },
             {
                 path: 'developer',
                 children: [

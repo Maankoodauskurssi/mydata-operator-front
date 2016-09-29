@@ -15,7 +15,7 @@ import { createEngine } from 'angular2-express-engine';
 import { MainModule } from './main.node';
 
 // enable prod for faster renders
-// enableProdMode();
+enableProdMode();
 
 const app = express();
 const ROOT = path.join(path.resolve(__dirname, '..'));
@@ -55,6 +55,8 @@ app.get('/about', ngApp);
 app.get('/about/*', ngApp);
 app.get('/developer', ngApp);
 app.get('/developer/*', ngApp);
+app.get('/kuluttaja', ngApp);
+app.get('/kuluttaja/*', ngApp);
 
 
 app.get('*', function (req, res) {

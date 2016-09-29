@@ -1,0 +1,13 @@
+.navbar {
+    margin-bottom: 2em;
+}
+
+.user-avoimet .card-footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.card-deck .card {
+    padding-bottom:50px;
+}
