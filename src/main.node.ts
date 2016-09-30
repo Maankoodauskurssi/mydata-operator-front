@@ -12,10 +12,11 @@ import { DevNavbarComponent } from './app/developer/devnavbar.component'
 import { DevloperAppsListComponent } from './app/developer/devapps.component'
 import { UserLandingPage } from './app/user/userlandingpage.component'
 import { UserNavbarComponent } from './app/user/usernavbar.component'
+import { ServiceDescriptionPage } from './app/services/servicedescription.component'
 
 @NgModule({
     bootstrap: [App],
-    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent, UserLandingPage, UserNavbarComponent],
+    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent, UserLandingPage, UserNavbarComponent, ServiceDescriptionPage],
     imports: [
         UniversalModule, // NodeModule, NodeHttpModule, and NodeJsonpModule are included
         FormsModule,
@@ -28,6 +29,7 @@ import { UserNavbarComponent } from './app/user/usernavbar.component'
                     { path: '', component: UserLandingPage, pathMatch: 'full' }
                 ]
             },
+            { path: 'palvelukuvaus/wwf', component: ServiceDescriptionPage, pathMatch: 'full' },
             {
                 path: 'developer',
                 children: [

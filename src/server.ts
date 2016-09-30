@@ -58,6 +58,10 @@ app.get('/developer/*', ngApp);
 app.get('/kuluttaja', ngApp);
 app.get('/kuluttaja/*', ngApp);
 
+app.get('/palvelukuvaus/wwf', ngApp);
+app.get('/palvelukuvaus/wwf/*', ngApp);
+
+
 
 app.get('*', function (req, res) {
     res.setHeader('Content-Type', 'application/json');
