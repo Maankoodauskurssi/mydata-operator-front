@@ -7,6 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { App } from './app/app';
 import { NavbarComponent } from './app/navbar.component'
 import { LandingPage } from './app/landingpage.component'
+import { DevLandingPage } from './app/devlandingpage.component'
+import { DataSourceLandingPage } from './app/datalandingpage.component'
+
 import { DeveloperLandingPage } from './app/developer/devlandingpage.component'
 import { DevNavbarComponent } from './app/developer/devnavbar.component'
 import { DevloperAppsListComponent } from './app/developer/devapps.component'
@@ -18,13 +21,16 @@ import {UserDatasourcesPage} from "./app/user/userdatasources.component";
 
 @NgModule({
     bootstrap: [App],
-    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent, UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage, UserDatasourcesPage],
+    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent,
+                   UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage, DevLandingPage, DataSourceLandingPage,UserDatasourcesPage],
     imports: [
         UniversalModule, // BrowserModule, HttpModule, and JsonpModule are included
         FormsModule,
         NgbModule,
         RouterModule.forRoot([
             { path: '', component: LandingPage, pathMatch: 'full' },
+            { path: 'dev', component: DevLandingPage, pathMatch: 'full' },
+            { path: 'data', component: DataSourceLandingPage, pathMatch: 'full' },
             {
                 path: 'kuluttaja',
                 children: [

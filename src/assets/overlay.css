@@ -1,3 +1,10 @@
+
+body {
+    font-family: niveau-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
 .navbar, .user-navbar {
     margin-bottom: 2em;
 }
@@ -19,8 +26,17 @@
 .header-text-lg {
     width: 70%;
     padding-top: 200px;
-    font-family: NiveauGrotesk;
-    font-size: 64px;
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 1px 10px rgba(40, 49, 109, 0.35);
+}
+
+.header-text-md {
+    width: 80%;
+    padding-top: 230px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
@@ -30,8 +46,7 @@
 .header-text-sm {
     width: 80%;
     padding-top: 230px;
-    font-family: NiveauGrotesk;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
@@ -39,15 +54,19 @@
 }
 
 .points {
-    font-family: NiveauGrotesk;
-    font-size: 120px;
+    font-size: 110px;
     font-weight: bold;
     color: #2c3eb7;
+    border: 1px solid #edeff9;
+    border-radius: 100px;
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    background-color: #edeff9;
 }
 
 .points-text {
-    font-family: NiveauGrotesk;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     color: #2c3eb7;
 }
@@ -57,6 +76,12 @@
     color: white;
 }
 
+.rectangle-footer {
+    background-color: #232b65;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
 .why-icon {
     font-size: 120px;
     line-height: 0.5;
@@ -65,10 +90,9 @@
 }
 
 .why-text {
-    font-family: NiveauGrotesk;
     font-size: 20px;
     font-weight: 300;
-    line-height: 2;
+    color: rgb(255, 255, 255);
     color: rgba(255, 255, 255, 0.8);
 }
 

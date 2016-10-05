@@ -9,13 +9,13 @@
         </a>
         <ul class="nav navbar-nav pull-xs-right">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Yksityishenkiö</a>
+                <a class="nav-link" href="#" routerLink="/">Yksityishenkiö</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" outerLinkActive="active" routerLink="/dev">Palveluntarjoaja</a>
+                <a class="nav-link active" href="#" routerLink="/dev">Palveluntarjoaja</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" outerLinkActive="active" routerLink="/data">Tietolähde</a>
+                <a class="nav-link" href="#" routerLink="/data">Tietolähde</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" (click)="open(content)">Kirjaudu</a>
@@ -24,9 +24,9 @@
     </div>
 </nav>
 
-<div style="background-image: url(/assets/header-yksityishenkilille.png); background-size: cover; background-position: center; height: 550px">
-    <div class="hidden-sm-down m-x-auto header-text-lg">Sinulla on kaikki oikeudet päättää datastasi.</div>
-    <div class="hidden-md-up m-x-auto header-text-sm">Sinulla on kaikki oikeudet päättää datastasi.</div>
+<div style="background-image: url(/assets/header-palveluntarjoajille.png); background-size: cover; background-position: center; height: 550px">
+    <div class="hidden-sm-down m-x-auto header-text-md">Paranna palveluasi luotettavalla ja yksilöllisellä tiedolla</div>
+    <div class="hidden-md-up m-x-auto header-text-sm">Paranna palveluasi luotettavalla ja yksilöllisellä tiedolla</div>
 
     <div class="row">
         <div class="col-md-12 text-xs-center">
@@ -41,121 +41,80 @@
     <div class="row p-a-3">
         <div class="col-md-3">
             <div class="points text-xs-center">1</div>
-            <div class="m-x-auto lead text-xs-center points-text">Päätät mitä tietojasi jaat ja mihin tarkoitukseen.</div>
+            <div class="m-x-auto lead text-xs-center points-text">Rakenna käyttäjille räätälöityjä palveluja tuhansien apien avulla</div>
         </div>
         <div class="col-md-3">
             <div class="points text-xs-center">2</div>
-            <div class="m-x-auto lead text-xs-center points-text">Pääset käyttämään täysin uudenlaisi, sinulle personoituja palveluita.</div>
+            <div class="m-x-auto lead text-xs-center points-text">Päätä itse millä hinnalla ostat apit käyttöösi</div>
         </div>
         <div class="col-md-3">
             <div class="points text-xs-center">3</div>
-            <div class="m-x-auto lead text-xs-center points-text">Voit tallentaa sinusta kerätyt tiedot keskitettyyn ja riippumattomaan.</div>
+            <div class="m-x-auto lead text-xs-center points-text">Voit luottaa että yksityisyyden suojan velvoitteet täyttyvät</div>
         </div>
         <div class="col-md-3">
             <div class="points text-xs-center">4</div>
-            <div class="m-x-auto lead text-xs-center points-text">Näet nyky- ja historiatilanteet.</div>
+            <div class="m-x-auto lead text-xs-center points-text">Mahdollisuus koostaa palveluita useista lähteistä</div>
         </div>
     </div>
 
     <div class="rectangle-2-copy-7">
         <h1 class="p-t-3 text-xs-center white-text">Toimi näin</h1>
 
-        <div class="row p-a-3">
-            <div class="col-md-4">
+        <div class="row  p-a-3">
+            <div class="col-md-3">
                 <div class="text-xs-center why-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
                 <div class="text-xs-center why-text">Rekisteröidy palveluun</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="text-xs-center why-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
                 <div class="text-xs-center why-text">Määrittele suostumuksesi</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
+                <div class="text-xs-center why-icon"><i class="fa fa-comments-o" aria-hidden="true"></i></div>
+                <div class="text-xs-center why-text">Tee tarjous tai käytä ilmaisia apeja</div>
+            </div>
+            <div class="col-md-3">
                 <div class="text-xs-center why-icon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="text-xs-center why-text">Nauti paveluista</div>
+                <div class="text-xs-center why-text">Ota APIt käyttöösi palvelussa</div>
             </div>
         </div>
     </div>
 
-    <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Selaa palveluita</h1>
+    <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Tarjolla olevia tietolähteitä</h1>
 
     <div class="row p-a-3">
         <div class="offset-md-1 col-md-2">
-            <div class="text-xs-center"><img src="/assets/liikennejalanjlki.png"></div>
-            <div class="m-x-auto lead text-xs-center points-text">Ekojalanjälki</div>
+            <div class="text-xs-center"><img src="/assets/suunto.png"></div>
+            <div class="m-x-auto lead text-xs-center points-text">Suunto</div>
         </div>
         <div class="col-md-2">
-            <div class="text-xs-center"><img src="/assets/terveysdata.png"></div>
-            <div class="m-x-auto lead text-xs-center points-text">Terveysdata</div>
+            <div class="text-xs-center"><img src="/assets/trafi.png"></div>
+            <div class="m-x-auto lead text-xs-center points-text">Trafi</div>
         </div>
         <div class="col-md-2">
-            <div class="text-xs-center"><img src="/assets/yle-areena.png"></div>
-            <div class="m-x-auto lead text-xs-center points-text">Yle Areena ++</div>
+            <div class="text-xs-center"><img src="/assets/v-r-k.png"></div>
+            <div class="m-x-auto lead text-xs-center points-text">VRK</div>
         </div>
         <div class="col-md-2">
-            <div class="text-xs-center"><img src="/assets/terveysdata.png"></div>
-            <div class="m-x-auto lead text-xs-center points-text">Autoparkki</div>
+            <div class="text-xs-center"><img src="/assets/nordea.png"></div>
+            <div class="m-x-auto lead text-xs-center points-text">Nordea</div>
         </div>
         <div class="col-md-2">
-            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
-            <div class="m-x-auto lead text-xs-center points-text">Ravintoseuranta</div>
+            <div class="text-xs-center"><img src="/assets/v-r.png"></div>
+            <div class="m-x-auto lead text-xs-center points-text">VR</div>
         </div>
     </div>
 
 
     <div class="rectangle-2-copy-7">
-        <h1 class="p-a-3 text-xs-center white-text">Hinnoittelu</h1>
+        <h1 class="p-a-3 text-xs-center white-text">Testaa apeja testiympäristössämme </h1>
 
-        <div class="row  p-b-3">
-            <div class="offset-md-1 col-md-10">
-
-                <table class="table feature-table">
-                    <thead class="thead">
-                        <tr>
-                            <th></th>
-                            <th>Free</th>
-                            <th>Standard</th>
-                            <th>Premium</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Suostumusten hallinta</th>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tiedot toimijoiden luotettavuudesta</th>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Täydellinen suostumusloki</th>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ajantasainen data palveluiden tarjoajille</th>
-                            <td></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Personal data storage</th>
-                            <td></td>
-                            <td></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Koosteviestit ja raportointi</th>
-                            <td></td>
-                            <td></td>
-                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="row p-b-3">
+            <div class="offset-md-3 col-md-3">
+                <i class="fa fa-cogs" aria-hidden="true" style="font-size: 225px;"></i>
+            </div>
+            <div class="col-md-3 lead why-text">
+                Testiympäristössämme on käytössä kaikki tietolähteet ja laaja esimerkkidata. Oman helpdeskin lisäksi meillä on vahva tukiyhteisö.
             </div>
         </div>
     </div>
@@ -260,6 +219,6 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" routerLink="/kuluttaja">Kirjaudu</button>
+        <button type="button" class="btn btn-primary" routerLink="/developer">Kirjaudu</button>
     </div>
 </template>
