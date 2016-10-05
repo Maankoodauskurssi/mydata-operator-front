@@ -9,7 +9,7 @@
         </a>
         <ul class="nav navbar-nav pull-xs-right">
             <li class="nav-item">
-                <a class="nav-link" href="#">Yksityishenkiö</a>
+                <a class="nav-link active" href="#">Yksityishenkiö</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Palveluntarjoaja</a>
@@ -24,16 +24,21 @@
     </div>
 </nav>
 
-<div style="background-image: url(/assets/header.png); background-size: cover; background-position: center; height: 550px">
+<div style="background-image: url(/assets/header-yksityishenkilille.png); background-size: cover; background-position: center; height: 550px">
     <div class="hidden-sm-down m-x-auto header-text-lg">Sinulla on kaikki oikeudet päättää datastasi.</div>
     <div class="hidden-md-up m-x-auto header-text-sm">Sinulla on kaikki oikeudet päättää datastasi.</div>
+
+    <div class="row">
+        <div class="col-md-12 text-xs-center">
+            <button class="btn btn-primary btn-lg m-x-auto" (click)="open(content)">Kirjaudu sisään</button>
+        </div>
+    </div>
 </div>
 
-<div class="container">
 
     <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Miksi Smooth Operator?</h1>
 
-    <div class="row p-b-3">
+    <div class="row p-a-3">
         <div class="col-md-3">
             <div class="points text-xs-center">1</div>
             <div class="m-x-auto lead text-xs-center points-text">Päätät mitä tietojasi jaat ja mihin tarkoitukseen.</div>
@@ -53,7 +58,7 @@
     </div>
 
     <div class="rectangle-2-copy-7">
-        <h1 class="p-t-3 p-b-3 text-xs-center white-text">Toimi näin</h1>
+        <h1 class="p-a-3 text-xs-center white-text">Toimi näin</h1>
 
         <div class="row  p-b-3">
             <div class="col-md-4">
@@ -73,21 +78,21 @@
 
     <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Selaa palveluita</h1>
 
-    <div class="row p-b-3">
+    <div class="row p-a-3">
         <div class="offset-md-1 col-md-2">
-            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="text-xs-center"><img src="/assets/liikennejalanjlki.png"></div>
             <div class="m-x-auto lead text-xs-center points-text">Ekojalanjälki</div>
         </div>
         <div class="col-md-2">
-            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="text-xs-center"><img src="/assets/terveysdata.png"></div>
             <div class="m-x-auto lead text-xs-center points-text">Terveysdata</div>
         </div>
         <div class="col-md-2">
-            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="text-xs-center"><img src="/assets/yle-areena.png"></div>
             <div class="m-x-auto lead text-xs-center points-text">Yle Areena ++</div>
         </div>
         <div class="col-md-2">
-            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="text-xs-center"><img src="/assets/terveysdata.png"></div>
             <div class="m-x-auto lead text-xs-center points-text">Autoparkki</div>
         </div>
         <div class="col-md-2">
@@ -98,7 +103,7 @@
 
 
     <div class="rectangle-2-copy-7">
-        <h1 class="p-t-3 p-b-3 text-xs-center white-text">Hinnoittelu</h1>
+        <h1 class="p-a-3 text-xs-center white-text">Hinnoittelu</h1>
 
         <div class="row  p-b-3">
             <div class="offset-md-1 col-md-10">
@@ -157,9 +162,9 @@
 
 
 
-    <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Smoot Operator numeroina</h1>
+    <h1 class="p-a-3 text-xs-center blue-text">Smoot Operator numeroina</h1>
 
-    <div class="row p-b-3">
+    <div class="row p-a-3">
         <div class="col-md-4">
             <div class="display-4 text-xs-center blue-text">7 210 318</div>
             <div class="m-x-auto lead text-xs-center points-text">Rekisteröityneitä käyttäjiä</div>
@@ -176,7 +181,7 @@
 
 
 
-    <div class="rectangle-2-copy-7 m-b-3">
+    <div class="rectangle-footer m-b-3">
         <div class="row p-a-3">
             <div class="col-md-3">
                 <div class="">Yksityishenkilöille</div>
@@ -232,8 +237,6 @@
 
 
 
-</div>
-
 
 
 
@@ -257,8 +260,6 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-primary" routerLink="/kuluttaja">login käyttäjä</button>
-        <button type="button" class="btn btn-primary" routerLink="/developer">login kehittäjä</button>
-        <button type="button" class="btn btn-primary" routerLink="/admin">login admin</button>
+        <button type="button" class="btn btn-primary" routerLink="/kuluttaja">Kirjaudu</button>
     </div>
 </template>
