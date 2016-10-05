@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import * as api from '../mydata-operator-service-client';
 
 
@@ -16,17 +16,17 @@ export class ServiceDescriptionPage {
 
     submitConsent() {
         var header: api.Header = {
-            version: '1',
-            jurisdiction: '',
-            iat: 1,
-            moc: '',
-            jti: '',
-            publicKey: '',
-            policyUrl: '',
-            sub: '',
-            sensitive: true,
-            spiCat: []
-        },
+                version: '1',
+                jurisdiction: '',
+                iat: 1,
+                moc: '',
+                jti: '',
+                publicKey: '',
+                policyUrl: '',
+                sub: '',
+                sensitive: true,
+                spiCat: []
+            },
             dataController: api.DataController = {
                 onBehalf: false,
                 contact: '',
