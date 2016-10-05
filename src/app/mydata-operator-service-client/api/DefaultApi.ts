@@ -35,7 +35,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class DefaultApi {
     protected basePath = 'http://localhost:8000/api';
-    public defaultHeaders : Headers = new Headers();
+    public defaultHeaders : Headers = new Headers({"Content-Type":"application/json"});
 
     constructor(protected http: Http, @Optional() basePath: string) {
         if (basePath) {
@@ -45,7 +45,7 @@ export class DefaultApi {
 
     /**
      *
-     * Gets full information about the consent receipt and its status, determined by the consent_id parameter.
+     * Gets full information about the consent receipt and its status, determined by the consentId parameter.
      * @param consentId Id of the consent receipt.
      */
     public consentReceiptConsentIdGet (consentId: string, extraHttpRequestParams?: any ) : Observable<string> {
@@ -58,6 +58,40 @@ export class DefaultApi {
         if (consentId === null || consentId === undefined) {
             throw new Error('Required parameter consentId was null or undefined when calling consentReceiptConsentIdGet.');
         }
+        let requestOptions: RequestOptionsArgs = {
+            method: 'GET',
+            headers: headerParams,
+            search: queryParameters
+        };
+
+        return this.http.request(path, requestOptions)
+            .map((response: Response) => {
+                if (response.status === 204) {
+                    return undefined;
+                } else {
+                    return response.json();
+                }
+            });
+    }
+
+    /**
+     *
+     * Gets detailed consent receipt data.
+     * @param subjectId Id of the consent subject (the data owner)
+     */
+    public consentReceiptGet (subjectId: string, extraHttpRequestParams?: any ) : Observable<models.Receipt> {
+        const path = this.basePath + '/consent/receipt';
+
+        let queryParameters = new URLSearchParams();
+        let headerParams = this.defaultHeaders;
+        // verify required parameter 'subjectId' is not null or undefined
+        if (subjectId === null || subjectId === undefined) {
+            throw new Error('Required parameter subjectId was null or undefined when calling consentReceiptGet.');
+        }
+        if (subjectId !== undefined) {
+            queryParameters.set('subjectId', String(subjectId));
+        }
+
         let requestOptions: RequestOptionsArgs = {
             method: 'GET',
             headers: headerParams,
@@ -104,7 +138,7 @@ export class DefaultApi {
      * Creates a new request for a consent.
      * @param request An array of consents linked to the same consent request.
      */
-    public consentRequestPost (request: Array<models.Request>, extraHttpRequestParams?: any ) : Observable<{}> {
+    public consentRequestPost (request: any, extraHttpRequestParams?: any ) : Observable<{}> {
         const path = this.basePath + '/consent/request';
 
         let queryParameters = new URLSearchParams();
@@ -133,7 +167,7 @@ export class DefaultApi {
 
     /**
      *
-     * Creates a new request for a consent.
+     * Gets detailed consent request information, defined by consent ID.
      * @param requestId The request Id.
      */
     public consentRequestRequestIdGet (requestId: string, extraHttpRequestParams?: any ) : Observable<models.Request> {

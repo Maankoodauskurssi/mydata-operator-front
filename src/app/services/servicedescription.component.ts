@@ -84,11 +84,11 @@ export class ServiceDescriptionPage {
                 services: services
             };
 
-        var requests = new Array<api.Request>(req);
+        //var requests = new Array<api.Request>(req);
 
         this.serviceSources.forEach(consent => {
             // TODO: create observable array instead
-            this._api.consentRequestPost(requests).subscribe(
+            this._api.consentRequestPost(req).subscribe(
                 response => this.response = response,
                 error => this.errorMessage = <any>error
             )
