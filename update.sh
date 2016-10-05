@@ -6,6 +6,6 @@ IP=52.59.228.227
 
 scp -i maankoodaus3.pem ./* ec2-user@${IP}:/opt/mkk-front/
 
-scp -r -i maankoodaus3.pem ./src ec2-user@${IP}:/opt/mkk-front/src/
+scp -r -i maankoodaus3.pem ./src ec2-user@${IP}:/opt/mkk-front/
 
 # ssh -i maankoodaus3.pem ec2-user@54.93.42.47  "cd /opt/mkk | node server.js &"
