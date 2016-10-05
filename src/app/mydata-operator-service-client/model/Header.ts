@@ -49,8 +49,6 @@ export interface Header {
 
     publicKey?: string;
 
-    policyUrl?: string;
-
     /**
      * Subject provided identifier, email address - or Claim, defined/namespace.
      */

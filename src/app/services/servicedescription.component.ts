@@ -66,10 +66,10 @@ export class ServiceDescriptionPage {
             },
             services: api.Services = [{
                 serviceName: 'wwf.ecologinen.jalanjalki',
+                policyUrl: 'http://www.wwf.org/ecoapp/privacypolicy.html',
                 purposes: [{
                     purpose: 'To calculate your traffic behaviour impact to the environment, we need to know your traffic related costs',
                     consentType: 'explicit',
-                    policyUrl: 'http://www.wwf.org/ecoapp/privacypolicy.html',
                     purposeCategory: ['1.core.function'],
                     piiCategory: ['Financial/PurchaseHistory'],
                     nonCorePurpose: false,
