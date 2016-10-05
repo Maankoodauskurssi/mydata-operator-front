@@ -1,7 +1,10 @@
 
 body {
-    font-family: 'NiveauGrotesk', sans-serif;
+    font-family: niveau-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
+
 .navbar, .user-navbar {
     margin-bottom: 2em;
 }
@@ -23,7 +26,17 @@ body {
 .header-text-lg {
     width: 70%;
     padding-top: 200px;
-    font-size: 64px;
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 1px 10px rgba(40, 49, 109, 0.35);
+}
+
+.header-text-md {
+    width: 80%;
+    padding-top: 230px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
@@ -33,7 +46,7 @@ body {
 .header-text-sm {
     width: 80%;
     padding-top: 230px;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
@@ -79,7 +92,7 @@ body {
 .why-text {
     font-size: 20px;
     font-weight: 300;
-    line-height: 2;
+    color: rgb(255, 255, 255);
     color: rgba(255, 255, 255, 0.8);
 }
 
