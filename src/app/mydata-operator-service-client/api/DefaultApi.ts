@@ -119,6 +119,7 @@ export class DefaultApi {
             search: queryParameters
         };
         requestOptions.body = JSON.stringify(request);
+        console.log("tester" + JSON.stringify(request));
 
         return this.http.request(path, requestOptions)
             .map((response: Response) => {
