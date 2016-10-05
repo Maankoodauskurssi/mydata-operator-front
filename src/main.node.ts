@@ -14,10 +14,11 @@ import { UserLandingPage } from './app/user/userlandingpage.component'
 import { UserNavbarComponent } from './app/user/usernavbar.component'
 import { ServiceDescriptionPage } from './app/services/servicedescription.component'
 import { UserConsentsPage } from './app/user/userconsents.component'
+import {UserDatasourcesPage} from "./app/user/userdatasources.component";
 
 @NgModule({
     bootstrap: [App],
-    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent, UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage],
+    declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent, UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage, UserDatasourcesPage],
     imports: [
         UniversalModule, // NodeModule, NodeHttpModule, and NodeJsonpModule are included
         FormsModule,
@@ -28,7 +29,8 @@ import { UserConsentsPage } from './app/user/userconsents.component'
                 path: 'kuluttaja',
                 children: [
                     { path: '', component: UserLandingPage, pathMatch: 'full' },
-                    { path: 'luvat', component: UserConsentsPage, pathMatch: 'full' }
+                    { path: 'luvat', component: UserConsentsPage, pathMatch: 'full' },
+                    { path: 'tietolähteet', component: UserDatasourcesPage, pathMatch: 'full' }
                 ]
             },
             { path: 'palvelukuvaus/wwf', component: ServiceDescriptionPage, pathMatch: 'full' },
