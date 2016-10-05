@@ -1,31 +1,241 @@
-<div class="container">
-
-    <nav class="navbar navbar-light">
-        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2"
-            aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-full navbar-dark bg-primary nav-no-padding">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2"
+        aria-expanded="false" aria-label="Toggle navigation">
     &#9776;
   </button>
-        <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-            <a class="navbar-brand" href="#">Smooth Operator</a>
-            <ul class="nav navbar-nav pull-xs-right">
-                <li class="nav-item">
-                    <a class="nav-link" (click)="open(content)">Kirjaudu</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/smoothoperator.svg">
+        </a>
+        <ul class="nav navbar-nav pull-xs-right">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Yksityishenkiö</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Palveluntarjoaja</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Tietolähde</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="open(content)">Kirjaudu</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-3">Moro!</h1>
-            <p class="lead">Tähän voi laittaa markkinointi textii</p>
-            <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Kirjaudu</button>
+<div style="background-image: url(/assets/header.png); background-size: cover; background-position: center; height: 550px">
+    <div class="hidden-sm-down m-x-auto header-text-lg">Sinulla on kaikki oikeudet päättää datastasi.</div>
+    <div class="hidden-md-up m-x-auto header-text-sm">Sinulla on kaikki oikeudet päättää datastasi.</div>
+</div>
+
+<div class="container">
+
+    <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Miksi Smooth Operator?</h1>
+
+    <div class="row p-b-3">
+        <div class="col-md-3">
+            <div class="points text-xs-center">1</div>
+            <div class="m-x-auto lead text-xs-center points-text">Päätät mitä tietojasi jaat ja mihin tarkoitukseen.</div>
+        </div>
+        <div class="col-md-3">
+            <div class="points text-xs-center">2</div>
+            <div class="m-x-auto lead text-xs-center points-text">Pääset käyttämään täysin uudenlaisi, sinulle personoituja palveluita.</div>
+        </div>
+        <div class="col-md-3">
+            <div class="points text-xs-center">3</div>
+            <div class="m-x-auto lead text-xs-center points-text">Voit tallentaa sinusta kerätyt tiedot keskitettyyn ja riippumattomaan.</div>
+        </div>
+        <div class="col-md-3">
+            <div class="points text-xs-center">4</div>
+            <div class="m-x-auto lead text-xs-center points-text">Näet nyky- ja historiatilanteet.</div>
         </div>
     </div>
 
-    blaa blaa... jaadi jaa...
+    <div class="rectangle-2-copy-7">
+        <h1 class="p-t-3 p-b-3 text-xs-center white-text">Toimi näin</h1>
+
+        <div class="row  p-b-3">
+            <div class="col-md-4">
+                <div class="text-xs-center why-icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+                <div class="text-xs-center why-text">Rekisteröidy palveluun</div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-xs-center why-icon"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                <div class="text-xs-center why-text">Määrittele suostumuksesi</div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-xs-center why-icon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
+                <div class="text-xs-center why-text">Nauti paveluista</div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Selaa palveluita</h1>
+
+    <div class="row p-b-3">
+        <div class="offset-md-1 col-md-2">
+            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="m-x-auto lead text-xs-center points-text">Ekojalanjälki</div>
+        </div>
+        <div class="col-md-2">
+            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="m-x-auto lead text-xs-center points-text">Terveysdata</div>
+        </div>
+        <div class="col-md-2">
+            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="m-x-auto lead text-xs-center points-text">Yle Areena ++</div>
+        </div>
+        <div class="col-md-2">
+            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="m-x-auto lead text-xs-center points-text">Autoparkki</div>
+        </div>
+        <div class="col-md-2">
+            <div class="points text-xs-center"><i class="fa fa-square-o" aria-hidden="true"></i></div>
+            <div class="m-x-auto lead text-xs-center points-text">Ravintoseuranta</div>
+        </div>
+    </div>
+
+
+    <div class="rectangle-2-copy-7">
+        <h1 class="p-t-3 p-b-3 text-xs-center white-text">Hinnoittelu</h1>
+
+        <div class="row  p-b-3">
+            <div class="offset-md-1 col-md-10">
+
+                <table class="table feature-table">
+                    <thead class="thead">
+                        <tr>
+                            <th></th>
+                            <th>Free</th>
+                            <th>Standard</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Suostumusten hallinta</th>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tiedot toimijoiden luotettavuudesta</th>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Täydellinen suostumusloki</th>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ajantasainen data palveluiden tarjoajille</th>
+                            <td></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Personal data storage</th>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Koosteviestit ja raportointi</th>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 class="p-t-3 p-b-3 text-xs-center blue-text">Smoot Operator numeroina</h1>
+
+    <div class="row p-b-3">
+        <div class="col-md-4">
+            <div class="display-4 text-xs-center blue-text">7 210 318</div>
+            <div class="m-x-auto lead text-xs-center points-text">Rekisteröityneitä käyttäjiä</div>
+        </div>
+        <div class="col-md-4">
+            <div class="display-4 text-xs-center blue-text">251 492</div>
+            <div class="m-x-auto lead text-xs-center points-text">APIa</div>
+        </div>
+        <div class="col-md-4">
+            <div class="display-4 text-xs-center blue-text">1 020 531</div>
+            <div class="m-x-auto lead text-xs-center points-text">Sovellusta</div>
+        </div>
+    </div>
+
+
+
+    <div class="rectangle-2-copy-7 m-b-3">
+        <div class="row p-a-3">
+            <div class="col-md-3">
+                <div class="">Yksityishenkilöille</div>
+                <ul>
+                    <li>In convallis</li>
+                    <li>Scelerisque ligula</li>
+                    <li>Scelerisque</li>
+                    <li>Condimentum</li>
+                    <li>Tellus ultricies</li>
+                    <li>Fusce</li>
+                    <li>Commodo mauris</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="">Yksityishenkilöille</div>
+                <ul>
+                    <li>Nunc sagittis</li>
+                    <li>Leo ultrices</li>
+                    <li>Vehicula sollicitudin</li>
+                    <li>Morbi</li>
+                    <li>Lectus</li>
+                    <li>Tempus odio</li>
+                    <li>Laculis libero</li>
+                    <li>Accumsan metus</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="">Yksityishenkilöille</div>
+                <ul>
+                    <li>In convallis</li>
+                    <li>Scelerisque ligula</li>
+                    <li>Scelerisque</li>
+                    <li>Condimentum</li>
+                    <li>Tellus ultricies</li>
+                    <li>Fusce</li>
+                    <li>Commodo mauris</li>
+                    <li>Scelerisque</li>
+                    <li>Condimentum</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="">Yksityishenkilöille</div>
+                <ul>
+                    <li>Condimentum</li>
+                    <li>Tellus ultricies</li>
+                    <li>Fusce</li>
+                    <li>Commodo mauris</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
 
 </div>
+
+
+
 
 <template ngbModalContainer #content let-c="close" let-d="dismiss">
     <div class="modal-header">
@@ -52,6 +262,3 @@
         <button type="button" class="btn btn-primary" routerLink="/admin">login admin</button>
     </div>
 </template>
-
-
-<hr>
