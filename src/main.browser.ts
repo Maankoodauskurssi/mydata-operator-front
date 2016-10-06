@@ -13,16 +13,23 @@ import { DataSourceLandingPage } from './app/datalandingpage.component'
 import { DeveloperLandingPage } from './app/developer/devlandingpage.component'
 import { DevNavbarComponent } from './app/developer/devnavbar.component'
 import { DevloperAppsListComponent } from './app/developer/devapps.component'
+import { DevloperTestbenchComponent } from './app/developer/devtestbench.component'
 import { UserLandingPage } from './app/user/userlandingpage.component'
 import { UserNavbarComponent } from './app/user/usernavbar.component'
 import { ServiceDescriptionPage } from './app/services/servicedescription.component'
 import { UserConsentsPage } from './app/user/userconsents.component'
-import {UserDatasourcesPage} from "./app/user/userdatasources.component";
+import { UserDatasourcesPage } from "./app/user/userdatasources.component";
+
+import { DatasourceNavbarComponent } from "./app/datasource/datasourcenavbar.component";
+import { DatasourceLandingPage } from "./app/datasource/datasourcelandingpage.component";
+import { DatasourceApiListComponent } from "./app/datasource/datasourceapilist.component";
+import { DatasourceShopComponent } from "./app/datasource/datasourceshop.component";
 
 @NgModule({
     bootstrap: [App],
     declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent,
-                   UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage, DevLandingPage, DataSourceLandingPage,UserDatasourcesPage],
+        UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage, DevLandingPage, DataSourceLandingPage, UserDatasourcesPage,
+        DevloperTestbenchComponent, DatasourceLandingPage, DatasourceApiListComponent, DatasourceShopComponent, DatasourceNavbarComponent],
     imports: [
         UniversalModule, // BrowserModule, HttpModule, and JsonpModule are included
         FormsModule,
@@ -44,7 +51,16 @@ import {UserDatasourcesPage} from "./app/user/userdatasources.component";
                 path: 'developer',
                 children: [
                     { path: '', component: DeveloperLandingPage, pathMatch: 'full' },
-                    { path: 'myapps', component: DevloperAppsListComponent, pathMatch: 'full' }
+                    { path: 'appsit', component: DevloperAppsListComponent, pathMatch: 'full' },
+                    { path: 'testipenkki', component: DevloperTestbenchComponent, pathMatch: 'full' }
+                ]
+            },
+            {
+                path: 'datasource',
+                children: [
+                    { path: '', component: DatasourceLandingPage, pathMatch: 'full' },
+                    { path: 'apit', component: DatasourceApiListComponent, pathMatch: 'full' },
+                    { path: 'kauppa', component: DatasourceShopComponent, pathMatch: 'full' }
                 ]
             }
         ])

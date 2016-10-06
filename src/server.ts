@@ -59,6 +59,8 @@ app.get('/developer', ngApp);
 app.get('/developer/*', ngApp);
 app.get('/kuluttaja', ngApp);
 app.get('/kuluttaja/*', ngApp);
+app.get('/datasource', ngApp);
+app.get('/datasource/*', ngApp);
 
 app.get('/palvelukuvaus/wwf', ngApp);
 app.get('/palvelukuvaus/wwf/*', ngApp);

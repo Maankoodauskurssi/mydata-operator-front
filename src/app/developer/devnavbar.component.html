@@ -1,17 +1,21 @@
-<nav class="navbar">
-    <ul class="nav navbar-nav">
-        <a class="navbar-brand" href="#">
-            <img src="/assets/smoothoperator.svg">
-        </a>
+<nav class="navbar navbar-full navbar-dark bg-primary">
+    <a class="navbar-brand" href="#" routerLink="/developer">
+        <img src="/assets/smoothoperator.svg">
+    </a>
 
-        <li class="nav-item active">
-            <a class="nav-link" href="#" routerLinkActive="active" routerLink="myapps">Minun appsit</a>
+    <ul class="nav navbar-nav pull-xs-right">
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/developer">Koti</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" routerLinkActive="active" routerLink="register">Rekisteröi appi</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/developer/appsit">Minun appsit</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" routerLinkActive="active" routerLink="test">Testipenkki</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/developer/testipenkki">Testipenkki</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/">Kirjaudu ulos</a>
         </li>
     </ul>
 </nav>
+
