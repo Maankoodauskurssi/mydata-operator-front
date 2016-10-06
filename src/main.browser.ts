@@ -14,6 +14,8 @@ import { DeveloperLandingPage } from './app/developer/devlandingpage.component'
 import { DevNavbarComponent } from './app/developer/devnavbar.component'
 import { DevloperAppsListComponent } from './app/developer/devapps.component'
 import { DevloperTestbenchComponent } from './app/developer/devtestbench.component'
+import { DevloperAppConfigComponent } from './app/developer/devappconfig.component'
+
 import { UserLandingPage } from './app/user/userlandingpage.component'
 import { UserNavbarComponent } from './app/user/usernavbar.component'
 import { ServiceDescriptionPage } from './app/services/servicedescription.component'
@@ -25,11 +27,15 @@ import { DatasourceLandingPage } from "./app/datasource/datasourcelandingpage.co
 import { DatasourceApiListComponent } from "./app/datasource/datasourceapilist.component";
 import { DatasourceShopComponent } from "./app/datasource/datasourceshop.component";
 
+import { ReceiptService } from './app/shared/receipt.service'
+
 @NgModule({
     bootstrap: [App],
+    providers: [ReceiptService],
     declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent,
         UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage, DevLandingPage, DataSourceLandingPage, UserDatasourcesPage,
-        DevloperTestbenchComponent, DatasourceLandingPage, DatasourceApiListComponent, DatasourceShopComponent, DatasourceNavbarComponent],
+        DevloperTestbenchComponent, DatasourceLandingPage, DatasourceApiListComponent, DatasourceShopComponent, DatasourceNavbarComponent,
+        DevloperAppConfigComponent],
     imports: [
         UniversalModule, // BrowserModule, HttpModule, and JsonpModule are included
         FormsModule,
@@ -52,7 +58,8 @@ import { DatasourceShopComponent } from "./app/datasource/datasourceshop.compone
                 children: [
                     { path: '', component: DeveloperLandingPage, pathMatch: 'full' },
                     { path: 'appsit', component: DevloperAppsListComponent, pathMatch: 'full' },
-                    { path: 'testipenkki', component: DevloperTestbenchComponent, pathMatch: 'full' }
+                    { path: 'testipenkki', component: DevloperTestbenchComponent, pathMatch: 'full' },
+                    { path: 'transposmart', component: DevloperAppConfigComponent, pathMatch: 'full' }
                 ]
             },
             {

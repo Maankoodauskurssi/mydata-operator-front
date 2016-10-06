@@ -1,0 +1,91 @@
+<dev-navbar></dev-navbar>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" src="/assets/transpo_logo.png" alt="Transpo Logo" width="70">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">TranspoSmart</h4>
+                </div>
+
+                <p class="p-t-1">
+                    The world’s leading traffic planning organization, TranspoSmart works in 100 countries. TranspoSmart's unique way of working combines global reach with
+                    a foundation in science, involves action at every level from local to global, and ensures the delivery
+                    of innovative solutions that meet the needs of both people and goods.
+                </p>
+                <p>
+                    TranspoSmart 1260 25th Street, N.W. Washington, DC 20037
+                </p>
+                <p>
+                    <a href="http://www.transposmart.org">transposmart.org</a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="col-md-7 offset-md-1 ">
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" src="/assets/Iconset_sp_research.png" alt="H&M Logo" width="50">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Kulutustietojen käyttäminen ekologisen jalanjäljen laskemiseksi</h4>
+                </div>
+
+            </div>
+
+            <p class="lead p-t-1">
+                TranspoSmart pyytää suostumustasi käyttää tietojasi kertaluontoisesti liikenteen jalan jälkesi laskemiseen.
+                TranspoSmart ei säilytä tietojasi, käytä niitä muihin tarkoituksiin tai jaa niitä eteenpäin.
+            </p>
+
+            <h4>Jaa tiedot seuraavista lähteistä:</h4>
+
+            <span class="small">Henkilötiedot</span>
+            <div *ngFor="let source of getSourcesByCategory('Henkilotiedot')">
+                <div class="row">
+                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                    <div class="col-xs-9">{{  source.dataSourceName  }}</div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                </div>
+            </div>
+
+            <span class="small">Paikkatiedot</span>
+            <div *ngFor="let source of getSourcesByCategory('Paikkatiedot')">
+                <div class="row">
+                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                    <div class="col-xs-9">{{  source.dataSourceName  }}</div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                </div>
+            </div>
+
+            <span class="small">Kulutustiedot</span>
+            <div *ngFor="let source of getSourcesByCategory('Kulutustiedot')">
+                <div class="row">
+                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                    <div class="col-xs-9">{{  source.dataSourceName  }}</div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                </div>
+            </div>
+
+            <span class="small">Ostotiedot</span>
+            <div *ngFor="let source of getSourcesByCategory('Ostotiedot')">
+                <div class="row">
+                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                    <div class="col-xs-9">{{  source.dataSourceName  }}</div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                </div>
+            </div>
+
+            <div class="p-t-1 p-b-3">
+                <button type="button" class="btn btn-primary" (click)="submitConsent()">Anna suostumus</button>
+                <button type="button" class="btn btn-link">→ Näytä tarkemmat tiedot</button>
+            </div>
+        </div>
+
+    </div>
+</div>
