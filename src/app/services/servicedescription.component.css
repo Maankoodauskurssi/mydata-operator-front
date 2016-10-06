@@ -45,3 +45,16 @@
     height: 60px;
     object-fit: contain;
 }
+
+.Jaatiedotseuraavis {
+    width: 270px;
+    height: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: NiveauGrotesk;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    color: #404040;
+}
