@@ -1,51 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as api from '../mydata-operator-service-client';
 import { ReceiptService } from '../shared/receipt.service';
 
 @Component({
     selector: 'navbar',
-    templateUrl: './servicedescription.component.html',
-    styleUrls: ['./servicedescription.component.css'],
+    templateUrl: './devappconfig.component.html',
     providers: [api.DefaultApi]
 })
-export class ServiceDescriptionPage implements OnInit {
+export class DevloperAppConfigComponent {
     response: any;
     errorMessage: String;
 
     serviceSources: Consent[] = [{
         dataSourceName: 'Trafi',
         category: 'Henkilotiedot',
-        icon: '/assets/liikenteen-turvallisuusvirasto-tra-fi-logo-copy.png',
+        icon: '/assets/vrk_logo.png',
         shareState: false
     }, {
         dataSourceName: 'Helsingin seudun liikenne',
         category: 'Paikkatiedot',
-        icon: '/assets/798-copy.png',
+        icon: '/assets/helen_logo.png',
         shareState: false
     }, {
-        dataSourceName: 'Scandinavian Airlines',
+        dataSourceName: 'SAS',
         category: 'Kulutustiedot',
-        icon: '/assets/2000-px-scandinavian-airlines-logosvg.png',
+        icon: '/assets/kesko_logo.png',
         shareState: false
     }, {
         dataSourceName: 'St1',
-        category: 'Ostotiedot',
-        icon: '/assets/st-1-logo-web-2.png',
+        category: 'Kulutustiedot',
+        icon: '/assets/st1_logo.png',
         shareState: false
     }];
 
     constructor(private _api: api.DefaultApi, private _receiptService: ReceiptService) {
-    }
-
-    ngOnInit() {
-        if (this._receiptService.data == true) {
-            this.serviceSources.push({
-                dataSourceName: 'Valtion Rautatiet',
-                category: 'Paikkatiedot',
-                icon: '/assets/st1_logo.png',
-                shareState: false
-            });
-        }
     }
 
     getSourcesByCategory(category: string) {
@@ -53,29 +41,28 @@ export class ServiceDescriptionPage implements OnInit {
     }
 
     submitConsent() {
+        this._receiptService.setData(true);
         // consent specification header
 
         //var requests = new Array<api.Request>(req);
-
-        var uuid = require('node-uuid');
 
         this.serviceSources.filter(consent => isApproved(consent)).forEach(consent => {
             // TODO: create observable array instead
 
             var header: api.Header = {
-                    version: '1',
-                    jurisdiction: 'fi',
-                    iat: 1,
-                    moc: 'automatic.app.request',
-                    jti: uuid.v4(), // unique receipt id, generate?
-                    // publicKey: '',
-                    // policyUrl: '', --> moved to service privacy policy
-                    // principal id
-                    sub: 'eppu.esimerkki@eemail.fi',
-                    sensitive: true,
-                    // Sensitive PI data category
-                    spiCat: [consent.category]
-                },
+                version: '1',
+                jurisdiction: 'fi',
+                iat: 1,
+                moc: 'automatic.app.request',
+                jti: '7c80b99e-dff9-4931-b927-bbddc0eec307', // unique receipt id, generate?
+                // publicKey: '',
+                // policyUrl: '', --> moved to service privacy policy
+                // principal id
+                sub: 'eppu.esimerkki@eemail.fi',
+                sensitive: true,
+                // Sensitive PI data category
+                spiCat: [consent.category]
+            },
                 dataController: api.DataController = {
                     onBehalf: false,
                     contact: 'support@test.fi',
@@ -106,17 +93,16 @@ export class ServiceDescriptionPage implements OnInit {
 
             console.log("consent db" + consent.dataSourceName + " foo");
             this._api.consentRequestPost(req).subscribe(
-                response => this.response = response,
-                error => this.errorMessage = <any>error
+                response => {
+                    this.response = response;
+                    this._receiptService.data = true;
+                },
+                error => {
+                    this.errorMessage = <any>error;
+                    this._receiptService.data = false;
+                }
             )
         });
-
-        if (this.errorMessage == null) {
-            document.getElementById("questionaire").style.display = "none";
-            document.getElementById("answerblock").style.display = "block";
-        } else {
-            console.log(" error " + this.errorMessage);
-        }
 
     }
 }
