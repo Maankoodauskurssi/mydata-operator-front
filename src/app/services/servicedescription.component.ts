@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import * as api from '../mydata-operator-service-client';
-import { ReceiptService } from '../shared/receipt.service';
+import {ReceiptService} from '../shared/receipt.service';
 
 @Component({
     selector: 'navbar',
@@ -38,7 +38,7 @@ export class ServiceDescriptionPage implements OnInit {
     }
 
     ngOnInit() {
-        if (this._receiptService.data == true) {
+        if (this._receiptService.data.length > 0) {
             this.serviceSources.push({
                 dataSourceName: 'Valtion Rautatiet',
                 category: 'Paikkatiedot',
@@ -106,9 +106,12 @@ export class ServiceDescriptionPage implements OnInit {
 
             console.log("consent db" + consent.dataSourceName + " foo");
             this._api.consentRequestPost(req).subscribe(
-                response => this.response = response,
+                response => {this.response = response; this._receiptService.setData(response['requestId'])},
                 error => this.errorMessage = <any>error
             )
+
+            console.log(" response " + this.response + " <");
+
         });
 
         if (this.errorMessage == null) {
@@ -117,6 +120,7 @@ export class ServiceDescriptionPage implements OnInit {
         } else {
             console.log(" error " + this.errorMessage);
         }
+
 
     }
 }

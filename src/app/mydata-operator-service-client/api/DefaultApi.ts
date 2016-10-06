@@ -157,6 +157,12 @@ export class DefaultApi {
 
         return this.http.request(path, requestOptions)
             .map((response: Response) => {
+                console.log("rastus" + response.status);
+                // console.log("rester" + response);
+                console.log("resjon" + JSON.stringify(response.json()));
+                console.log("resjonw" + JSON.stringify(response.json()));
+
+                //foobar = JSON.parse(foo);
                 if (response.status === 204) {
                     return undefined;
                 } else {

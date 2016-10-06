@@ -41,7 +41,7 @@ export class DevloperAppConfigComponent {
     }
 
     submitConsent() {
-        this._receiptService.setData(true);
+        // this._receiptService.setData('');
         // consent specification header
 
         //var requests = new Array<api.Request>(req);
@@ -95,11 +95,11 @@ export class DevloperAppConfigComponent {
             this._api.consentRequestPost(req).subscribe(
                 response => {
                     this.response = response;
-                    this._receiptService.data = true;
+                    this._receiptService.setData(response['requestId']);
                 },
                 error => {
                     this.errorMessage = <any>error;
-                    this._receiptService.data = false;
+                    this._receiptService.setData('');
                 }
             )
         });

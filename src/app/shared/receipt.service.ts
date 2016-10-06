@@ -3,17 +3,17 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ReceiptService {
-    data: boolean;
+    data: string;
     // dataChange: Observable<any>;
 
     constructor() {
         // this.dataChange = new Observable((observer: Observer) {
         //     this.dataChange = observer;
         // });
-        this.setData(false);
+        this.setData('');
     }
 
-    setData(data: boolean) {
+    setData(data: string) {
         this.data = data;
         // this.dataChange.next(this.data);
     }
