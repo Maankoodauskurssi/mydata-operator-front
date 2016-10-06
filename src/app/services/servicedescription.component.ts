@@ -12,23 +12,23 @@ export class ServiceDescriptionPage {
     errorMessage: String;
 
     serviceSources: Consent[] = [{
-        dataSourceName: 'Väestörekisterikeskus',
+        dataSourceName: 'Trafi',
         category: 'Henkilotiedot',
         icon: '/assets/vrk_logo.png',
         shareState: false
     }, {
-        dataSourceName: 'Helsingin energia',
-        category: 'Kulutustiedot',
+        dataSourceName: 'Helsingin seudun liikenne',
+        category: 'Paikkatiedot',
         icon: '/assets/helen_logo.png',
         shareState: false
     }, {
-        dataSourceName: 'Kesko',
-        category: 'Ostotiedot',
+        dataSourceName: 'SAS',
+        category: 'Kulutustiedot',
         icon: '/assets/kesko_logo.png',
         shareState: false
     }, {
         dataSourceName: 'St1',
-        category: 'Ostotiedot',
+        category: 'Kulutustiedot',
         icon: '/assets/st1_logo.png',
         shareState: false
     }];
@@ -42,52 +42,55 @@ export class ServiceDescriptionPage {
 
     submitConsent() {
         // consent specification header
-        var header: api.Header = {
-                version: '1',
-                jurisdiction: 'fi',
-                iat: 1,
-                moc: 'automatic.app.request',
-                jti: '7c80b99e-dff9-4931-b927-bbddc0eec307', // unique receipt id, generate?
-                // publicKey: '',
-                // policyUrl: '', --> moved to service privacy policy
-                // principal id
-                sub: 'eppu.esimerkki@eemail.fi',
-                sensitive: true,
-                // Sensitive PI data category
-                spiCat: ['Financial/PurchaseHistory']
-            },
-            dataController: api.DataController = {
-                onBehalf: false,
-                contact: 'support@sti.fi',
-                org: 'STi',
-                address: 'Testitie 1, Postimaa',
-                email: 'sti@sti.com',
-                phone: '12345667890'
-            },
-            services: api.Services = [{
-                serviceName: 'wwf.ecologinen.jalanjalki',
-                policyUrl: 'http://www.wwf.org/ecoapp/privacypolicy.html',
-                purposes: [{
-                    purpose: 'To calculate your traffic behaviour impact to the environment, we need to know your traffic related costs',
-                    consentType: 'explicit',
-                    purposeCategory: ['1.core.function'],
-                    piiCategory: ['Financial/PurchaseHistory'],
-                    nonCorePurpose: false,
-                    purposeTermination: 'no-expiry',
-                    thirdPartyDisclosure: false
-                    //thirdPartyName: ''
-                }]
-            }],
-            req: api.Request = {
-                dataController: dataController,
-                header: header,
-                services: services
-            };
 
         //var requests = new Array<api.Request>(req);
 
-        this.serviceSources.forEach(consent => {
+        this.serviceSources.filter(consent => isApproved(consent)).forEach(consent => {
             // TODO: create observable array instead
+
+            var header: api.Header = {
+                    version: '1',
+                    jurisdiction: 'fi',
+                    iat: 1,
+                    moc: 'automatic.app.request',
+                    jti: '7c80b99e-dff9-4931-b927-bbddc0eec307', // unique receipt id, generate?
+                    // publicKey: '',
+                    // policyUrl: '', --> moved to service privacy policy
+                    // principal id
+                    sub: 'eppu.esimerkki@eemail.fi',
+                    sensitive: true,
+                    // Sensitive PI data category
+                    spiCat: [consent.category]
+                },
+                dataController: api.DataController = {
+                    onBehalf: false,
+                    contact: 'support@test.fi',
+                    org: consent.dataSourceName,
+                    address: 'Testitie 1, Postimaa',
+                    email: 'contact@test.com',
+                    phone: '12345667890'
+                },
+                services: api.Services = [{
+                    serviceName: 'Transpostmart',
+                    policyUrl: 'http://www.tpm.org/privacypolicy.html',
+                    purposes: [{
+                        purpose: 'To calculate your traffic behaviour impact to the environment, we need to know your traffic related costs',
+                        consentType: 'explicit',
+                        purposeCategory: ['1.core.function'],
+                        piiCategory: ['Financial/PurchaseHistory'],
+                        nonCorePurpose: false,
+                        purposeTermination: 'no-expiry',
+                        thirdPartyDisclosure: false
+                        //thirdPartyName: ''
+                    }]
+                }],
+                req: api.Request = {
+                    dataController: dataController,
+                    header: header,
+                    services: services
+                };
+
+            console.log("consent db" + consent.dataSourceName+" foo");
             this._api.consentRequestPost(req).subscribe(
                 response => this.response = response,
                 error => this.errorMessage = <any>error
@@ -96,6 +99,11 @@ export class ServiceDescriptionPage {
 
     }
 }
+
+function isApproved(consent) {
+    return consent.shareState;
+}
+
 
 interface Consent {
     dataSourceName?: string,

@@ -6,23 +6,22 @@
         <div class="col-md-4">
             <div class="media">
                 <div class="media-left">
-                    <img class="media-object" src="/assets/WWF_logo.jpg" alt="H&M Logo" width="70">
+                    <img class="media-object" src="/assets/transpo_logo.png" alt="Transpo Logo" width="70">
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">World Wildlife Fund</h4>
+                    <h4 class="media-heading">TranspoSmart</h4>
                 </div>
 
                 <p class="p-t-1">
-                    The world’s leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the
-                    United States and close to 5 million globally. WWF's unique way of working combines global reach with
+                    The world’s leading traffic planning organization, TranspoSmart works in 100 countries. TranspoSmart's unique way of working combines global reach with
                     a foundation in science, involves action at every level from local to global, and ensures the delivery
-                    of innovative solutions that meet the needs of both people and nature.
+                    of innovative solutions that meet the needs of both people and goods.
                 </p>
                 <p>
-                    World Wildlife Fund 1250 24th Street, N.W. Washington, DC 20037
+                    TranspoSmart 1260 25th Street, N.W. Washington, DC 20037
                 </p>
                 <p>
-                    <a href="http://worldwilflife.org">worldwilflife.org</a>
+                    <a href="http://www.transposmart.org">transposmart.org</a>
                 </p>
             </div>
 
@@ -40,14 +39,23 @@
             </div>
 
             <p class="lead p-t-1">
-                World Wildlife Fund pyytää suostumustasi käyttää tietojasi kertaluontoisesti ekologisen jalanjälkesi laskemiseen. World Wildlife
-                Fund ei säilytä tietojasi, käytä niitä muihin tarkoituksiin tai jaa niitä eteenpäin.
+                TranspoSmart pyytää suostumustasi käyttää tietojasi kertaluontoisesti liikenteen jalan jälkesi laskemiseen.
+                TranspoSmart ei säilytä tietojasi, käytä niitä muihin tarkoituksiin tai jaa niitä eteenpäin.
             </p>
 
             <h4>Jaa tiedot seuraavista lähteistä:</h4>
 
             <span class="small">Henkilötiedot</span>
             <div *ngFor="let source of getSourcesByCategory('Henkilotiedot')">
+                <div class="row">
+                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                    <div class="col-xs-9">{{  source.dataSourceName  }}</div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                </div>
+            </div>
+
+            <span class="small">Paikkatiedot</span>
+            <div *ngFor="let source of getSourcesByCategory('Paikkatiedot')">
                 <div class="row">
                     <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                     <div class="col-xs-9">{{  source.dataSourceName  }}</div>
