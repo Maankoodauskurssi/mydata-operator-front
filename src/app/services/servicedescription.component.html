@@ -6,10 +6,7 @@
         <div class="col-md-4">
             <div class="media">
                 <div class="media-left">
-                    <img class="media-object" src="/assets/transpo_logo.png" alt="Transpo Logo" width="70">
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading">TranspoSmart</h4>
+                    <img class="transpo_logo" src="/assets/transpo-logo.png" alt="Transpo Logo">
                 </div>
 
                 <p class="p-t-1">
@@ -17,11 +14,15 @@
                     a foundation in science, involves action at every level from local to global, and ensures the delivery
                     of innovative solutions that meet the needs of both people and goods.
                 </p>
-                <p>
-                    TranspoSmart 1260 25th Street, N.W. Washington, DC 20037
+                <p><b>
+                    TranspoSmart
+                </b>
                 </p>
                 <p>
-                    <a href="http://www.transposmart.org">transposmart.org</a>
+                Eteläesplanadi 16 00130, Helsinki
+                </p>
+                <p>
+                    <a href="http://www.transposmart.com">transposmart.com</a>
                 </p>
             </div>
 
@@ -30,54 +31,52 @@
         <div class="col-md-7 offset-md-1 ">
             <div class="media">
                 <div class="media-left">
-                    <img class="media-object" src="/assets/Iconset_sp_research.png" alt="H&M Logo" width="50">
+                    <img class="media-object" src="/assets/Iconset_sp_research.png" alt="research Logo" width="50">
                 </div>
                 <div class="media-body">
-                    <h4 class="media-heading">Kulutustietojen käyttäminen ekologisen jalanjäljen laskemiseksi</h4>
+                    <h4 class="Kulutustietojen-ky">Kulutustietojen käyttäminen liikenteestä johtuvan jalanjälkesi laskemiseksi</h4>
+                </div>
+
+                <div class="Transposmart-pyyt">
+                    Transposmart pyytää lupaa käyttää tietojasi kertaluontoisesti liikenteestä johtuvan liikenteellisen jalanjälkesi laskemiseen. Transposmart ei säilytä tietojasi, käytä niitä muihin tarkoituksiin tai jaa niitä eteenpäin.
                 </div>
 
             </div>
-
-            <p class="lead p-t-1">
-                TranspoSmart pyytää suostumustasi käyttää tietojasi kertaluontoisesti liikenteen jalan jälkesi laskemiseen.
-                TranspoSmart ei säilytä tietojasi, käytä niitä muihin tarkoituksiin tai jaa niitä eteenpäin.
-            </p>
-
             <h4>Jaa tiedot seuraavista lähteistä:</h4>
 
-            <span class="small">Henkilötiedot</span>
+            <span class="Kategoria">Henkilötiedot</span>
             <div *ngFor="let source of getSourcesByCategory('Henkilotiedot')">
                 <div class="row">
                     <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                     <div class="col-xs-9">{{  source.dataSourceName  }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2"></div>
                 </div>
             </div>
 
-            <span class="small">Paikkatiedot</span>
+            <span class="Kategoria">Paikkatiedot</span>
             <div *ngFor="let source of getSourcesByCategory('Paikkatiedot')">
                 <div class="row">
                     <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                     <div class="col-xs-9">{{  source.dataSourceName  }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2"></div>
                 </div>
             </div>
 
-            <span class="small">Kulutustiedot</span>
+            <span class="Kategoria">Kulutustiedot</span>
             <div *ngFor="let source of getSourcesByCategory('Kulutustiedot')">
                 <div class="row">
                     <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                     <div class="col-xs-9">{{  source.dataSourceName  }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2"></div>
                 </div>
             </div>
 
-            <span class="small">Ostotiedot</span>
+            <span class="Kategoria">Ostotiedot</span>
             <div *ngFor="let source of getSourcesByCategory('Ostotiedot')">
                 <div class="row">
                     <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                     <div class="col-xs-9">{{  source.dataSourceName  }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"></div>
+                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2"></div>
                 </div>
             </div>
 

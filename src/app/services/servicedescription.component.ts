@@ -5,6 +5,7 @@ import * as api from '../mydata-operator-service-client';
 @Component({
     selector: 'navbar',
     templateUrl: './servicedescription.component.html',
+    styleUrls: ['./servicedescription.component.css'],
     providers: [api.DefaultApi]
 })
 export class ServiceDescriptionPage {
@@ -14,22 +15,22 @@ export class ServiceDescriptionPage {
     serviceSources: Consent[] = [{
         dataSourceName: 'Trafi',
         category: 'Henkilotiedot',
-        icon: '/assets/vrk_logo.png',
+        icon: '/assets/liikenteen-turvallisuusvirasto-tra-fi-logo-copy.png',
         shareState: false
     }, {
         dataSourceName: 'Helsingin seudun liikenne',
         category: 'Paikkatiedot',
-        icon: '/assets/helen_logo.png',
+        icon: '/assets/798-copy.png',
         shareState: false
     }, {
-        dataSourceName: 'SAS',
+        dataSourceName: 'Scandinavian Airlines',
         category: 'Kulutustiedot',
-        icon: '/assets/kesko_logo.png',
+        icon: '/assets/2000-px-scandinavian-airlines-logosvg.png',
         shareState: false
     }, {
         dataSourceName: 'St1',
-        category: 'Kulutustiedot',
-        icon: '/assets/st1_logo.png',
+        category: 'Ostotiedot',
+        icon: '/assets/st-1-logo-web-2.png',
         shareState: false
     }];
 
