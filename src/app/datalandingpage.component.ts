@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-    templateUrl: './devlandingpage.component.html'
+    templateUrl: './datalandingpage.component.html'
 })
 export class DataSourceLandingPage {
     closeResult: string;
