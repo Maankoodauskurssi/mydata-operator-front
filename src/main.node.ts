@@ -53,11 +53,11 @@ import { ReceiptService } from './app/shared/receipt.service'
                     { path: 'tietolähteet', component: UserDatasourcesPage, pathMatch: 'full' }
                 ]
             },
-            { path: 'palvelukuvaus/wwf', component: ServiceDescriptionPage, pathMatch: 'full' },
+            { path: 'palvelukuvaus/transposmart', component: ServiceDescriptionPage, pathMatch: 'full' },
             {
                 path: 'developer',
                 children: [
-                    { path: '', component: DeveloperLandingPage, pathMatch: 'full' },
+                    { path: '', component: DeveloperLandingPage, pathMatch: 'full', redirectTo: 'appsit' },
                     { path: 'appsit', component: DevloperAppsListComponent, pathMatch: 'full' },
                     { path: 'testipenkki', component: DevloperTestbenchComponent, pathMatch: 'full' },
                     { path: 'transposmart', component: DevloperAppConfigComponent, pathMatch: 'full' }
@@ -66,7 +66,7 @@ import { ReceiptService } from './app/shared/receipt.service'
             {
                 path: 'datasource',
                 children: [
-                    { path: '', component: DatasourceLandingPage, pathMatch: 'full' },
+                    { path: '', component: DatasourceLandingPage, pathMatch: 'full', redirectTo: 'apit' },
                     { path: 'apit', component: DatasourceApiListComponent, pathMatch: 'full' },
                     { path: 'kauppa', component: DatasourceShopComponent, pathMatch: 'full' }
                 ]

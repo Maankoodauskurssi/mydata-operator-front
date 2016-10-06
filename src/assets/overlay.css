@@ -116,3 +116,11 @@ body {
 .feature-table td, .feature-table th {
     border-top: 0;
 }
+
+.app-category-icons > img{
+    width: 45px;
+}
+
+.faded {
+    filter: opacity(0.3) grayscale(80%);
+}
