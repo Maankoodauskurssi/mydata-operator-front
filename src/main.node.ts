@@ -28,6 +28,7 @@ import { DatasourceApiListComponent } from "./app/datasource/datasourceapilist.c
 import { DatasourceShopComponent } from "./app/datasource/datasourceshop.component";
 
 import { ReceiptService } from './app/shared/receipt.service'
+import {DevShopConsentsPage} from "./app/developer/devshopconsents.component";
 
 @NgModule({
     bootstrap: [App],
@@ -35,7 +36,7 @@ import { ReceiptService } from './app/shared/receipt.service'
     declarations: [App, NavbarComponent, LandingPage, DeveloperLandingPage, DevNavbarComponent, DevloperAppsListComponent,
         UserLandingPage, UserNavbarComponent, ServiceDescriptionPage, UserConsentsPage, DevLandingPage, DataSourceLandingPage, UserDatasourcesPage,
         DevloperTestbenchComponent,DatasourceLandingPage, DatasourceApiListComponent, DatasourceShopComponent, DatasourceNavbarComponent,
-        DevloperAppConfigComponent],
+        DevloperAppConfigComponent,DevShopConsentsPage],
 
     imports: [
         UniversalModule, // NodeModule, NodeHttpModule, and NodeJsonpModule are included
@@ -60,7 +61,8 @@ import { ReceiptService } from './app/shared/receipt.service'
                     { path: '', component: DeveloperLandingPage, pathMatch: 'full', redirectTo: 'appsit' },
                     { path: 'appsit', component: DevloperAppsListComponent, pathMatch: 'full' },
                     { path: 'testipenkki', component: DevloperTestbenchComponent, pathMatch: 'full' },
-                    { path: 'transposmart', component: DevloperAppConfigComponent, pathMatch: 'full' }
+                    { path: 'transposmart', component: DevloperAppConfigComponent, pathMatch: 'full' },
+                    { path: 'kauppa', component: DevShopConsentsPage, pathMatch: 'full' }
                 ]
             },
             {

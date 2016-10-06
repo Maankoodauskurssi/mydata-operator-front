@@ -1,0 +1,49 @@
+.Rectangle-2-Copy-26 {
+    width: 370px;
+    height: 220px;
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.bordershop {
+    margin: 20px 20px 20px 20px;
+}
+
+.Rectangle-6-Copy-4 {
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #505fca;
+    border: solid 1px #384184;
+}
+
+.Liskoriin {
+    width: 120px;
+    height: 19px;
+    margin-top: 8px;
+    font-family: NiveauGrotesk;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.-Nyt-listietoja {
+    width: 170px;
+    height: 24px;
+    font-family: NiveauGrotesk;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    color: #505fca;
+}
+
+.-Nyt-listietoja .text-style-1 {
+    margin-top: 8px;
+    font-family: LucidaGrande;
+    font-size: 16px;
+    font-weight: bold;
+}
