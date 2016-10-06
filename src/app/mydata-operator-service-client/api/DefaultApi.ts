@@ -35,7 +35,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class DefaultApi {
     protected basePath = 'http://52.59.228.227:8000/api';
-    public defaultHeaders : Headers = new Headers({"Content-Type":"application/json"});
+    public defaultHeaders: Headers = new Headers({"Content-Type": "application/json"});
 
     constructor(protected http: Http, @Optional() basePath: string) {
         if (basePath) {
@@ -48,9 +48,9 @@ export class DefaultApi {
      * Gets full information about the consent receipt and its status, determined by the consentId parameter.
      * @param consentId Id of the consent receipt.
      */
-    public consentReceiptConsentIdGet (consentId: string, extraHttpRequestParams?: any ) : Observable<string> {
+    public consentReceiptConsentIdGet(consentId: string, extraHttpRequestParams?: any): Observable<string> {
         const path = this.basePath + '/consent/receipt/{consentId}'
-            .replace('{' + 'consentId' + '}', String(consentId));
+                .replace('{' + 'consentId' + '}', String(consentId));
 
         let queryParameters = new URLSearchParams();
         let headerParams = this.defaultHeaders;
@@ -79,7 +79,7 @@ export class DefaultApi {
      * Gets detailed consent receipt data.
      * @param subjectId Id of the consent subject (the data owner)
      */
-    public consentReceiptGet (subjectId: string, extraHttpRequestParams?: any ) : Observable<models.Receipt> {
+    public consentReceiptGet(subjectId: string, extraHttpRequestParams?: any): Observable<models.Receipt> {
         const path = this.basePath + '/consent/receipt';
 
         let queryParameters = new URLSearchParams();
@@ -112,7 +112,7 @@ export class DefaultApi {
      *
      * Creates a new consent receipt.
      */
-    public consentReceiptPost (extraHttpRequestParams?: any ) : Observable<string> {
+    public consentReceiptPost(extraHttpRequestParams?: any): Observable<string> {
         const path = this.basePath + '/consent/receipt';
 
         let queryParameters = new URLSearchParams();
@@ -138,7 +138,7 @@ export class DefaultApi {
      * Creates a new request for a consent.
      * @param request An array of consents linked to the same consent request.
      */
-    public consentRequestPost (request: any, extraHttpRequestParams?: any ) : Observable<{}> {
+    public consentRequestPost(request: any, extraHttpRequestParams?: any): Observable<{}> {
         const path = this.basePath + '/consent/request';
 
         let queryParameters = new URLSearchParams();
@@ -170,9 +170,9 @@ export class DefaultApi {
      * Gets detailed consent request information, defined by consent ID.
      * @param requestId The request Id.
      */
-    public consentRequestRequestIdGet (requestId: string, extraHttpRequestParams?: any ) : Observable<models.Request> {
+    public consentRequestRequestIdGet(requestId: string, extraHttpRequestParams?: any): Observable<models.Request> {
         const path = this.basePath + '/consent/request/{requestId}'
-            .replace('{' + 'requestId' + '}', String(requestId));
+                .replace('{' + 'requestId' + '}', String(requestId));
 
         let queryParameters = new URLSearchParams();
         let headerParams = this.defaultHeaders;
