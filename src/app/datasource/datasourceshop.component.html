@@ -1,3 +1,94 @@
 <datasource-navbar></datasource-navbar>
 
-kauppa
+<div class="container">
+
+    <h5>API kauppa</h5>
+
+    <div class="row">
+
+        <div class="col-md-5">
+            <div class="card card-block">
+                <h3 class="card-title">1. Kuvaus</h3>
+                <textarea type="textarea" rows="5" style="width:100%;"></textarea>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card card-block">
+                <h3 class="card-title">2. Kategoriat</h3>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label><input type="checkbox"> Henkilötiedot</label>
+                        <label><input type="checkbox"> Yhteystiedot</label>
+                        <label><input type="checkbox"> Paikkatiedot</label>
+                        <label><input type="checkbox"> Terveystiedot</label>
+                    </div>
+                    <div class="col-md-4">
+                        <label><input type="checkbox"> Psykologiset tiedot</label>
+                        <label><input type="checkbox"> Biometriset tiedot</label>
+                        <label><input type="checkbox"> Palvelutiedot</label>
+                        <label><input type="checkbox"> Jäsenyydet</label>
+                    </div>
+                    <div class="col-md-4">
+                        <label><input type="checkbox"> Taloustiedot</label>
+                        <label><input type="checkbox"> Varallisuustiedot</label>
+                        <label><input type="checkbox"> Kulutustiedot</label>
+                        <label><input type="checkbox"> Oikeustiedot</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-5">
+            <div class="card card-block">
+                <h3 class="card-title">3. Aikarajaus</h3>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h6>Aloituspäivä:</h6>
+                                    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                                    <div class="input-group-addon" (click)="d.toggle()">
+                                        <i class="fa fa-calendar" aria-hidden="true" style="width: 1.2rem; cursor: pointer;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h6>Lopetuspäivä:</h6>
+                                    <input class="form-control" placeholder="yyyy-mm-dd" name="dp2" [(ngModel)]="model2" ngbDatepicker #d="ngbDatepicker">
+                                    <div class="input-group-addon" (click)="d2.toggle()">
+                                        <i class="fa fa-calendar" aria-hidden="true" style="width: 1.2rem; cursor: pointer;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card card-block">
+                <h3 class="card-title">4. Rajaa liikennemäärä</h3>
+                <div class="row">
+                    <div class="col-md-3">
+                        100MB / päivä
+                    </div>
+                    <div class="col-md-9">
+                        <progress value="30" max="100" style="width:100%;"></progress>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary pull-right">Myy dataa</button>
+        </div>
+
+    </div>
+
+</div>
