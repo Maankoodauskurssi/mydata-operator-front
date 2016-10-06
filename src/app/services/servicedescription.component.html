@@ -52,10 +52,10 @@
             <div id="questionaire">
                 <h4 class="Jaatiedotseuraavis">Jaa tiedot seuraavista lähteistä:</h4>
 
-                <span class="Kategoria">Henkilötiedot</span>
+                <span *ngIf="getSourcesByCategory('Liikenne').length != 0" class="Kategoria">Henkilötiedot</span>
 
-                <div *ngFor="let source of getSourcesByCategory('Henkilotiedot')">
-                    <div class="row">
+                <div *ngFor="let source of getSourcesByCategory('Liikenne')">
+                    <div class="row p-b-1">
                         <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                         <div class="col-xs-9">{{ source.dataSourceName }}</div>
                         <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"
@@ -64,9 +64,9 @@
                     </div>
                 </div>
 
-                <span class="Kategoria">Paikkatiedot</span>
+                <span *ngIf="getSourcesByCategory('Paikkatiedot').length != 0" class="Kategoria">Paikkatiedot</span>
                 <div *ngFor="let source of getSourcesByCategory('Paikkatiedot')">
-                    <div class="row">
+                    <div class="row p-b-1">
                         <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                         <div class="col-xs-9">{{ source.dataSourceName }}</div>
                         <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"
@@ -75,9 +75,9 @@
                     </div>
                 </div>
 
-                <span class="Kategoria">Kulutustiedot</span>
+                <span *ngIf="getSourcesByCategory('Kulutustiedot').length != 0" class="Kategoria">Kulutustiedot</span>
                 <div *ngFor="let source of getSourcesByCategory('Kulutustiedot')">
-                    <div class="row">
+                    <div class="row p-b-1">
                         <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                         <div class="col-xs-9">{{ source.dataSourceName }}</div>
                         <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"
@@ -86,9 +86,9 @@
                     </div>
                 </div>
 
-                <span class="Kategoria">Ostotiedot</span>
+                <span *ngIf="getSourcesByCategory('Ostotiedot').length != 0" class="Kategoria">Ostotiedot</span>
                 <div *ngFor="let source of getSourcesByCategory('Ostotiedot')">
-                    <div class="row">
+                    <div class="row p-b-1">
                         <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
                         <div class="col-xs-9">{{ source.dataSourceName }}</div>
                         <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"

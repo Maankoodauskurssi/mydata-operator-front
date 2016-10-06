@@ -53,7 +53,7 @@ import { ReceiptService } from './app/shared/receipt.service'
                     { path: 'tietolähteet', component: UserDatasourcesPage, pathMatch: 'full' }
                 ]
             },
-            { path: 'palvelukuvaus/wwf', component: ServiceDescriptionPage, pathMatch: 'full' },
+            { path: 'palvelukuvaus/transposmart', component: ServiceDescriptionPage, pathMatch: 'full' },
             {
                 path: 'developer',
                 children: [

@@ -14,24 +14,24 @@ export class ServiceDescriptionPage implements OnInit {
 
     serviceSources: Consent[] = [{
         dataSourceName: 'Trafi',
-        category: 'Henkilotiedot',
+        category: 'Liikenne',
         icon: '/assets/liikenteen-turvallisuusvirasto-tra-fi-logo-copy.png',
-        shareState: false
+        shareState: true
     }, {
         dataSourceName: 'Helsingin seudun liikenne',
-        category: 'Paikkatiedot',
-        icon: '/assets/798-copy.png',
-        shareState: false
+        category: 'Liikenne',
+        icon: '/assets/hsl.png',
+        shareState: true
     }, {
         dataSourceName: 'Scandinavian Airlines',
-        category: 'Kulutustiedot',
+        category: 'Liikenne',
         icon: '/assets/2000-px-scandinavian-airlines-logosvg.png',
-        shareState: false
+        shareState: true
     }, {
         dataSourceName: 'St1',
-        category: 'Ostotiedot',
+        category: 'Liikenne',
         icon: '/assets/st-1-logo-web-2.png',
-        shareState: false
+        shareState: true
     }];
 
     constructor(private _api: api.DefaultApi, private _receiptService: ReceiptService) {
@@ -41,8 +41,8 @@ export class ServiceDescriptionPage implements OnInit {
         if (this._receiptService.data == true) {
             this.serviceSources.push({
                 dataSourceName: 'Valtion Rautatiet',
-                category: 'Paikkatiedot',
-                icon: '/assets/st1_logo.png',
+                category: 'Liikenne',
+                icon: '/assets/v-r-icon-copy.png',
                 shareState: false
             });
         }

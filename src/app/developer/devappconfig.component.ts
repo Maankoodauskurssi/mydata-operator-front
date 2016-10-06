@@ -13,23 +13,28 @@ export class DevloperAppConfigComponent {
 
     serviceSources: Consent[] = [{
         dataSourceName: 'Trafi',
-        category: 'Henkilotiedot',
-        icon: '/assets/vrk_logo.png',
-        shareState: false
+        category: 'Liikenne',
+        icon: '/assets/trafi.png',
+        shareState: true
     }, {
         dataSourceName: 'Helsingin seudun liikenne',
-        category: 'Paikkatiedot',
-        icon: '/assets/helen_logo.png',
-        shareState: false
+        category: 'Liikenne',
+        icon: '/assets/hsl.png',
+        shareState: true
     }, {
         dataSourceName: 'SAS',
-        category: 'Kulutustiedot',
-        icon: '/assets/kesko_logo.png',
-        shareState: false
+        category: 'Liikenne',
+        icon: '/assets/2000-px-scandinavian-airlines-logosvg.png',
+        shareState: true
     }, {
         dataSourceName: 'St1',
-        category: 'Kulutustiedot',
+        category: 'Liikenne',
         icon: '/assets/st1_logo.png',
+        shareState: true
+    }, {
+        dataSourceName: 'Valtion rautatiet',
+        category: 'Liikenne',
+        icon: '/assets/v-r-icon-copy.png',
         shareState: false
     }];
 
