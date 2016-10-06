@@ -33,11 +33,11 @@
     width: 270px;
     height: 19px;
     font-family: NiveauGrotesk;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
-    color: rgba(64, 64, 64, 0.3);
+    color: rgba(32, 32, 32, 0.5);
 }
 
 .transpo_logo {
@@ -47,12 +47,12 @@
 }
 
 .Jaatiedotseuraavis {
-    width: 270px;
-    height: 24px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+    height: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     font-family: NiveauGrotesk;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
