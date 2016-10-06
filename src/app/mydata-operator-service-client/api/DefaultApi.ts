@@ -34,7 +34,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class DefaultApi {
-    protected basePath = 'http://localhost:8000/api';
+    protected basePath = 'http://52.59.228.227:8000/api';
     public defaultHeaders : Headers = new Headers({"Content-Type":"application/json"});
 
     constructor(protected http: Http, @Optional() basePath: string) {
