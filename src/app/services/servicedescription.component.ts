@@ -45,6 +45,9 @@ export class ServiceDescriptionPage {
 
         //var requests = new Array<api.Request>(req);
 
+        var uuid = require('node-uuid');
+
+
         this.serviceSources.filter(consent => isApproved(consent)).forEach(consent => {
             // TODO: create observable array instead
 
@@ -53,7 +56,7 @@ export class ServiceDescriptionPage {
                     jurisdiction: 'fi',
                     iat: 1,
                     moc: 'automatic.app.request',
-                    jti: '7c80b99e-dff9-4931-b927-bbddc0eec307', // unique receipt id, generate?
+                    jti: uuid.v4(), // unique receipt id, generate?
                     // publicKey: '',
                     // policyUrl: '', --> moved to service privacy policy
                     // principal id

@@ -38,6 +38,7 @@
     "imports-loader": "^0.6.5",
     "json-loader": "^0.5.4",
     "node-sass": "^3.10.0",
+    "node-uuid": "~1.4.7",
     "nodemon": "^1.10.0",
     "raw-loader": "^0.5.1",
     "resolve-url-loader": "^1.6.0",
