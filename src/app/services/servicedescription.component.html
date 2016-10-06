@@ -49,53 +49,64 @@
                 </div>
             </div>
 
-            <h4 class="Jaatiedotseuraavis">Jaa tiedot seuraavista lähteistä:</h4>
+            <div id="questionaire">
+                <h4 class="Jaatiedotseuraavis">Jaa tiedot seuraavista lähteistä:</h4>
 
-            <span class="Kategoria">Henkilötiedot</span>
+                <span class="Kategoria">Henkilötiedot</span>
 
-            <div *ngFor="let source of getSourcesByCategory('Henkilotiedot')">
-                <div class="row">
-                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
-                    <div class="col-xs-9">{{ source.dataSourceName }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2">
+                <div *ngFor="let source of getSourcesByCategory('Henkilotiedot')">
+                    <div class="row">
+                        <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                        <div class="col-xs-9">{{ source.dataSourceName }}</div>
+                        <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"
+                                                     class="Rectangle-2">
+                        </div>
                     </div>
+                </div>
+
+                <span class="Kategoria">Paikkatiedot</span>
+                <div *ngFor="let source of getSourcesByCategory('Paikkatiedot')">
+                    <div class="row">
+                        <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                        <div class="col-xs-9">{{ source.dataSourceName }}</div>
+                        <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"
+                                                     class="Rectangle-2">
+                        </div>
+                    </div>
+                </div>
+
+                <span class="Kategoria">Kulutustiedot</span>
+                <div *ngFor="let source of getSourcesByCategory('Kulutustiedot')">
+                    <div class="row">
+                        <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                        <div class="col-xs-9">{{ source.dataSourceName }}</div>
+                        <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"
+                                                     class="Rectangle-2">
+                        </div>
+                    </div>
+                </div>
+
+                <span class="Kategoria">Ostotiedot</span>
+                <div *ngFor="let source of getSourcesByCategory('Ostotiedot')">
+                    <div class="row">
+                        <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
+                        <div class="col-xs-9">{{ source.dataSourceName }}</div>
+                        <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState"
+                                                     class="Rectangle-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-t-1 p-b-3">
+                    <button type="button" class="btn btn-primary" (click)="submitConsent()">Anna suostumus</button>
+                    <button type="button" class="btn btn-link">→ Näytä tarkemmat tiedot</button>
                 </div>
             </div>
 
-            <span class="Kategoria">Paikkatiedot</span>
-            <div *ngFor="let source of getSourcesByCategory('Paikkatiedot')">
-                <div class="row">
-                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
-                    <div class="col-xs-9">{{ source.dataSourceName }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2">
-                    </div>
-                </div>
+            <div id="answerblock" style="display:none">
+                <img style="width:360px;margin-top: 40px;" src="/assets/bubble1.png" alt="research Logo">
             </div>
 
-            <span class="Kategoria">Kulutustiedot</span>
-            <div *ngFor="let source of getSourcesByCategory('Kulutustiedot')">
-                <div class="row">
-                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
-                    <div class="col-xs-9">{{ source.dataSourceName }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2">
-                    </div>
-                </div>
-            </div>
-
-            <span class="Kategoria">Ostotiedot</span>
-            <div *ngFor="let source of getSourcesByCategory('Ostotiedot')">
-                <div class="row">
-                    <div class="col-xs-1"><img src="{{  source.icon  }}" width="25" height="25"></div>
-                    <div class="col-xs-9">{{ source.dataSourceName }}</div>
-                    <div class="col-xs-2"><input type="checkbox" [(ngModel)]="source.shareState" class="Rectangle-2">
-                    </div>
-                </div>
-            </div>
-
-            <div class="p-t-1 p-b-3">
-                <button type="button" class="btn btn-primary" (click)="submitConsent()">Anna suostumus</button>
-                <button type="button" class="btn btn-link">→ Näytä tarkemmat tiedot</button>
-            </div>
         </div>
 
     </div>

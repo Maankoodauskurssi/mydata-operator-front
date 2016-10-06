@@ -48,7 +48,6 @@ export class ServiceDescriptionPage {
 
         var uuid = require('node-uuid');
 
-
         this.serviceSources.filter(consent => isApproved(consent)).forEach(consent => {
             // TODO: create observable array instead
 
@@ -100,6 +99,13 @@ export class ServiceDescriptionPage {
                 error => this.errorMessage = <any>error
             )
         });
+
+        if (this.errorMessage == null) {
+            document.getElementById("questionaire").style.display = "none";
+            document.getElementById("answerblock").style.display = "block";
+        } else {
+            console.log(" error " + this.errorMessage);
+        }
 
     }
 }
