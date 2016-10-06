@@ -114,11 +114,15 @@ export class ServiceDescriptionPage implements OnInit {
 
         });
 
-        if (this.errorMessage == null) {
+        if (this.serviceSources.length > 4 ) {
+            document.getElementById("questionaire").style.display = "none";
+            document.getElementById("answerblock").style.display = "none";
+            document.getElementById("answerblock2").style.display = "block";
+        } else {
             document.getElementById("questionaire").style.display = "none";
             document.getElementById("answerblock").style.display = "block";
-        } else {
-            console.log(" error " + this.errorMessage);
+            document.getElementById("answerblock2").style.display = "none";
+
         }
 
 
